@@ -1,13 +1,40 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget{
-  
-  String description_dumy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores eaque eveniet nam, porro at harum, similique nobis laudantium cumque deleniti molestiae? Eligendi dolorum quae recusandae qui quam quidem ipsa!";
-  
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+  //Constructor
+  DescriptionPlace(this.namePlace,this.stars,this.descriptionPlace);
+
   @override
   Widget build(BuildContext context) {
 
-    
+    //star half
+    final star_half = Container(
+      margin:EdgeInsets.only(
+        top: 323.0,
+        right: 3.0
+      ),
+      child: Icon(
+        Icons.star_half,
+        color: Colors.yellow,
+        ),
+    );
+
+    // star empty
+    final star_empty = Container(
+      margin:EdgeInsets.only(
+        top: 323.0,
+        right: 3.0
+      ),
+      child: Icon(
+        Icons.star_border,
+        color: Colors.yellow,
+        ),
+    );
+
     //Stars
     final star = Container(
       margin:EdgeInsets.only(
@@ -30,7 +57,7 @@ class DescriptionPlace extends StatelessWidget{
             right: 20.0
           ),
           child: Text(
-            "Ixtenco",
+            namePlace,
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold
@@ -42,36 +69,36 @@ class DescriptionPlace extends StatelessWidget{
           star,
           star,
           star,
-          star,
-          star,
+          star_half,
+          star_empty,
         ],)
       ],
       );
 
-  final descriptionp_place = Container(
-    margin: EdgeInsets.only(
-      top: 10.0,
-      right: 20.0,
-      left: 20.0
-    ),
-    child: Text(
-      description_dumy,
-      style: TextStyle(
-        fontSize: 20.0,
+    // description place
+    final description_place = Container(
+      margin: EdgeInsets.only(
+        top: 10.0,
+        right: 20.0,
+        left: 20.0
       ),
-    ),
-  );
+      child: Text(
+        descriptionPlace,
+        style: TextStyle(
+          fontSize: 20.0,
+        ),
+      ),
+    );
 
-  final place_info =Column(
-    children: <Widget>[
-      title_stars,
-      descriptionp_place
-  ],
-  );
+    //widget place info
+    final place_info =Column(
+      children: <Widget>[
+        title_stars,
+        description_place,
+    ],
+    );
+    
     return place_info;
   }
-
-
-
 
 }

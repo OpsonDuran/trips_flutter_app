@@ -4,7 +4,8 @@ import './description_place.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  String description_dumy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores eaque eveniet nam, porro at harum, similique nobis laudantium cumque deleniti molestiae? Eligendi dolorum quae recusandae qui quam quidem ipsa!";
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Trips Flutter')),
-        body: DescriptionPlace()
+        body: DescriptionPlace(
+          "Ixtenco",
+          5,
+          description_dumy)
       )
     );
   }
