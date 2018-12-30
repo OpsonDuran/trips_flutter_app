@@ -12,7 +12,7 @@ class DescriptionPlace extends StatelessWidget{
   Widget build(BuildContext context) {
 
     //star half
-    final star_half = Container(
+    final starHalf = Container(
       margin:EdgeInsets.only(
         top: 323.0,
         right: 3.0
@@ -24,7 +24,7 @@ class DescriptionPlace extends StatelessWidget{
     );
 
     // star empty
-    final star_empty = Container(
+    final starEmpty = Container(
       margin:EdgeInsets.only(
         top: 323.0,
         right: 3.0
@@ -47,8 +47,8 @@ class DescriptionPlace extends StatelessWidget{
         ),
     );
 
-    //PlaceTitlte
-    final title_stars = Row(
+    //Place Tittle
+    final titleStars = Row(
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(
@@ -59,8 +59,9 @@ class DescriptionPlace extends StatelessWidget{
           child: Text(
             namePlace,
             style: TextStyle(
+              fontFamily: "Lato",
               fontSize: 30,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.w900
             ),
             textAlign: TextAlign.left,
           ),
@@ -69,14 +70,14 @@ class DescriptionPlace extends StatelessWidget{
           star,
           star,
           star,
-          star_half,
-          star_empty,
+          starHalf,
+          starEmpty,
         ],)
       ],
       );
 
     // description place
-    final description_place = Container(
+    final descriptionPlaces = Container(
       margin: EdgeInsets.only(
         top: 10.0,
         right: 20.0,
@@ -85,20 +86,22 @@ class DescriptionPlace extends StatelessWidget{
       child: Text(
         descriptionPlace,
         style: TextStyle(
-          fontSize: 20.0,
+          fontFamily: "Lato",
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold
         ),
       ),
     );
 
     //widget place info
-    final place_info =Column(
+    final placeInfo =Column(
       children: <Widget>[
-        title_stars,
-        description_place,
+        titleStars,
+        descriptionPlaces,
     ],
     );
     
-    return place_info;
+    return placeInfo;
   }
 
 }
