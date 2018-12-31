@@ -73,3 +73,9 @@ flutter:
         - asset: fonts/Lato-Regular.ttf
   assets:
     - assets/img/luisillo.jpg
+    - assets/img/coreano.jpg
+    - assets/img/alan.jpg
+    - assets/img/montaña.jpeg
+    - assets/img/palmeras.jpeg
+    - assets/img/playa.jpeg
+    - assets/img/rocas.jpeg

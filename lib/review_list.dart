@@ -1,25 +1,16 @@
 import 'package:flutter/material.dart';
 import './review.dart';
-class ReviewList extends StatelessWidget{
-  String pathImage = "assets/img/luisillo.jpg";
-  String name = "Luisito comunica";
-  String details = "1 review 5 photos";
-  String comment = "Is amazing place for eat and travel";
 
-  
+class ReviewList extends StatelessWidget{  
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container(
-      margin: EdgeInsets.only(
-        left: 20.0,
-        right: 20.0
-      ),
-      child: Column(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Review(pathImage,name,details,comment),
-      ],
-    )
+        Review("assets/img/luisillo.jpg","Luisito Comunica","1 review 5 photos","Is amazing place for eat and travel"),
+        Review("assets/img/alan.jpg","Alan por el Mundo","1 review 2 photos","Is amazing place for eat"),
+        Review("assets/img/coreano.jpg","Coreano Vlogs","1 review 4 photos","Is amazing place for travel")
+      ]
     ) ;
   }
 

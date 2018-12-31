@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './description_place.dart';
 import './review_list.dart';
+import './header_appbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,19 +17,21 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Trips Flutter')),
-        body:Column(
+        body:Stack(
           children: <Widget>[
-             DescriptionPlace(
+            ListView(
+              children: <Widget>[
+                DescriptionPlace(
                "Ixtenco",
                 5,
                 description_dumy),
-             ReviewList()
+                ReviewList()
+              ],
+            ),
+            HeaderAppBar(),
           ],
         )
       )
     );
   }
 }
-

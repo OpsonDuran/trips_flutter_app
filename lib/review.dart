@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget{
 
-  String pathImage;
-  String name;
-  String details;
-  String comment;
+  String pathImage ;
+  String name ;
+  String details ;
+  String comment ;
+
   //Constructor
   Review(this.pathImage,this.name,this.details,this.comment);
 
@@ -58,6 +59,7 @@ class Review extends StatelessWidget{
           color: Color(0xFFa3a5a7)
         ),    
       ),
+      
     );
 
     // comment
@@ -91,8 +93,8 @@ class Review extends StatelessWidget{
       children: <Widget>[
         photo,
         userDetails
-
-      ],);
+      ],
+      );
   }
 
 
